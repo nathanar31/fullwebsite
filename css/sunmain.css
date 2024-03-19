@@ -337,12 +337,13 @@ object-fit: cover;
 }
 
 .caption {
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
   position: absolute;
   bottom: 0;
   top: 13em;
   left: 0;
   width: 100%;
-  font-weight: 300;
   letter-spacing: -0.5px;
   font-size: 18px;
   color: #fff;
@@ -408,6 +409,7 @@ object-fit: cover;
 }
 */
   .accordion-container{
+      
     padding: 10px;
     margin-top: 350px;
     width: 70%;
@@ -416,6 +418,9 @@ object-fit: cover;
 
   /* accordion title text styles */
     .accordion-container p.accordion {
+      font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+
      color: white;
       font-size: 1.5em;
     }
@@ -437,6 +442,7 @@ object-fit: cover;
 
     /* accordion title styles */
     .accordion-container .accordion {
+
       cursor: pointer;
       padding: 15px 15px;
       margin: 0;
@@ -534,6 +540,7 @@ object-fit: cover;
 
 
 .breakdown .righttext3 .text3{
+
   padding-left: 20px;
 }
 
@@ -568,6 +575,7 @@ object-fit: cover;
 
 
 .header {
+
   position: fixed;
   top: -100px; /* Start off-screen */
   left: 40px;
@@ -623,11 +631,12 @@ object-fit: cover;
 
 }*/
 
-.logo {                           
+.logo {  
+font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;                         
   color: #fff;
   font-size: 18px;
   text-decoration: none;
-  font-weight: 300;
   letter-spacing:-0.5px;
   cursor: default;
     transition: 0.3s;
@@ -635,6 +644,8 @@ object-fit: cover;
 }
 
 .navbar a {
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
   color: #fff;
   font-size: 11px;
   font-weight: 300;
@@ -663,8 +674,8 @@ object-fit: cover;
   left: 200px;
   margin-top: 10px;
   text-shadow: 0px 0px 23px #ffffff;
-  font-family: 'TWK Lausanne';
-  font-weight: 450;
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
   color: #ffffff;
   font-size: 16vw;
   letter-spacing: -0.06em;
@@ -693,6 +704,8 @@ html{
 }
 
 .back-to-top {
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -772,6 +785,9 @@ transform: translateY(-4px);
     padding-left: 0px;
     padding-right: 150px;
     }
+    .backgroundinfo {
+    margin-left: 20%;
+    }
 
 
 
@@ -780,8 +796,8 @@ transform: translateY(-4px);
   }
 
   .accordion-container{
-  margin-left: -30%;
-   width: 50%;
+  margin-left: -10%;
+   width: 70%;
   }
 
   .moons p {
@@ -839,5 +855,23 @@ margin-left: -25%;
   .nav-bg.active {
     display: block;
   }
+
+
+  .flex-container {
+ margin-left: 0;
+
+}
+
+.locationsubtitle{
+width:60%;
+margin-left: 10%;
+}
+
+.atmosphertitle p {
+margin-left: -10%;
+/*justify-content: center;*/
+}
+
+
 }
 

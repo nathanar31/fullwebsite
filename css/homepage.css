@@ -22,6 +22,8 @@ place-items: center;
 
 
 .introduction {
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
   column-count: 4;
   margin-top: 550px;
   padding: 70px;
@@ -30,6 +32,7 @@ place-items: center;
 }
 
 .introduction p {
+  letter-spacing: -0.5px;
   color: white;
   font-weight: 300;
   font-size: 15px;
@@ -40,6 +43,7 @@ place-items: center;
 
 
 .header {
+
   position: fixed;
   top: -100px; /* Start off-screen */
   left: 40px;
@@ -86,7 +90,9 @@ place-items: center;
   left: 95%;
 }
 
-.logo {                            
+.logo {         
+font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;                   
   color: #fff;
   font-size: 18px;
   text-decoration: none;
@@ -98,6 +104,8 @@ place-items: center;
 }
 
 .navbar a {
+  font-family: "TWK Lausanne-200", Helvetica;
+  font-weight: 300;
   color: #fff;
   font-size: 11px;
   font-weight: 300;
@@ -169,12 +177,12 @@ place-items: center;
 
 .solarbigtext {
   position: absolute;
-  top: 130px;
+  top: 150px;
   left: 70px;
   margin-top: 10px;
   text-shadow: 0px 0px 21px #ffffff;
-  font-family: 'TWK Lausanne';
-  font-weight: 450;
+font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
   color: #ffffff;
   font-size: 10vw;
   letter-spacing: -0.06em;
@@ -195,25 +203,6 @@ place-items: center;
   }
 }
 
-@media (max-width: 600px) {
-  .solarbigtext {
-    left: 0.5em; /* Adjust the left value for smaller screens */
-      font-size: 16vw;
-  }
-
-  .accordion-container{
-   width: 60%;
-  }
-
-  .introduction {
-  column-count: 2;
-  margin-top: 500px;
-  padding: 70px;
-}
-
-
-
-}
 
 
 .earthside {
@@ -250,6 +239,24 @@ place-items: center;
   transform: rotate(-20deg); /* Adjust the angle as needed */
 }
 
+
+@media (max-width: 768px) {
+
+   .solarbigtext {
+    left: 0.5em; /* Adjust the left value for smaller screens */
+      font-size: 16vw;
+  }
+
+  .accordion-container{
+   width: 60%;
+  }
+.introduction {
+  column-count: 1;
+  margin-top: 500px;
+  padding: 70px;
+}
+
+}
 
 
 

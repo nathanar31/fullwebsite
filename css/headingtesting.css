@@ -1,7 +1,6 @@
 
 
 * {
-  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +9,6 @@
 
 body {
 /*min-height: 100vh;*/
-
 background-color: black;
 overflow-x: hidden;
 width: 100%;
@@ -20,10 +18,26 @@ place-items: center;
 
 }
 
+.dropdown { /* CSS for dropdown */
+  display: none;
+  position: fixed;
+  top: 100%;
+  left: 81%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  height: 200px;
+  z-index: 999;
+}
+
+#planet-link:hover .dropdown { /* Show dropdown when hovering over planet link */
+  display: block;
+}
 
 .lineartefact {
   position: relative;
-  top: 270%;
+  top: 360%;
   left: 0; 
 /*  transform: translate(-50%, -50%);*/
 }
@@ -132,34 +146,48 @@ place-items: center;
 
 
 .mercuryimagetop {
-    margin-top: -80%;
-    margin-right: -130%;
+    margin-top: -20%;
+    margin-right: -30%;
     width: 180%;
     height: auto;
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    animation: slideInFromRight2 1s ease forwards;
+    animation: slideInFromRight2 1s ease forwards; /* Apply animation */
 }
-
 
 @keyframes slideInFromRight2 {
     from {
-        margin-right: -170%; /* Start position */
+        margin-right: -80%; /* Start position */
     }
     to {
-        margin-right: -130%; /* End position */
+        margin-right: -30%; /* End position */
     }
 }
-
 
 .mercuryimagetop img {
     width: 80%;
     height: auto;
-    transform: rotate(-20deg); /* Rotate the image by -20 degrees */
+     transform: rotate(-90deg); 
 }
 
 
+/*@keyframes slideInFromTop {
+  0% {
+    top: -200%;
+    opacity: 0;
+  }
+  100% {
+    top: -100%; 
+    opacity: 1; 
+  }
+}*/
+
+/*.mercuryimagetop img {
+
+  width: 100%;
+}
+*/
 
 
 
@@ -395,14 +423,15 @@ place-items: center;
 
 
 .line {
-    top: -850px;
+    top: -1420px;
     left: 10%; /* Initially off the screen to the left */
     position: relative;
     width: 750px; /* Adjust the length of the line */
     height: 0.1px; /* Adjust the thickness of the line */
     background-color: white; /* Adjust the color of the line */
-     animation: slideIn1 1.2s forwards; 
+    animation: slideIn1 1.2s forwards; 
 }
+
 
 @keyframes slideIn1 {
     from {
@@ -416,7 +445,7 @@ place-items: center;
 
 
 .line2 {
-    top: -130%; /* Initially off the screen to the bottom */
+    top: -205%; /* Initially off the screen to the bottom */
     left: 400px;
     position: relative;
     width: 0.1px; /* Adjust the length of the line */
@@ -425,16 +454,14 @@ place-items: center;
     animation: slideIn2 1.2s forwards; 
 }
 
-
 @keyframes slideIn2 {
     from {
         top: 80%; 
     }
     to {
-        top: -130%; 
+        top: -205%; 
     }
 }
-
 
 
 
@@ -446,7 +473,7 @@ place-items: center;
   left: 40px;
   width: 60%;
   padding: 10px 30px;
-  background: linear-gradient(rgba(255, 248, 248, 0.1), rgba(0, 0, 0, 0.02));
+  background: linear-gradient(rgba(255, 248, 248, 0.1), rgba(0, 0, 0, 0.1));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -531,7 +558,6 @@ place-items: center;
 
 
 .mercurybigtext {
-
   position: absolute;
   top: 250px;
   left: 200px;
@@ -632,7 +658,7 @@ transform: translateY(-4px);
 
 .lineartefact {
   position: relative;
-  top: 360%;
+  top: 400%;
   left: 0; 
 /*  transform: translate(-50%, -50%);*/
 }
@@ -701,8 +727,14 @@ transform: translateY(-4px);
     padding-right: 150px;
     }
 
+    .backgroundinfo {
+    margin-left: 20%;
+    }
+
+
+
     .moonscontent {
-      margin-left: -30%;
+      margin-left: -5%;
       max-width: 28.5em; /* 600px / 16px = 37.5em */
     }
 
@@ -721,16 +753,16 @@ transform: translateY(-4px);
   }
 
   .accordion-container{
-  margin-left: -30%;
-   width: 50%;
+  margin-left: -10%;
+   width: 70%;
   }
 
   .moons p {
-   margin-left: -30%;
+   margin-left: -5%;
 }
 
 .atmosphertitle p {
-margin-left: -25%;
+margin-left: 0;
 /*justify-content: center;*/
 }
 .lineartefact {
@@ -739,6 +771,13 @@ margin-left: -25%;
   left: 0; 
 /*  transform: translate(-50%, -50%);*/
 }
+
+.flex-container {
+ margin-left: 0;
+
+}
+
+
 
 }
 

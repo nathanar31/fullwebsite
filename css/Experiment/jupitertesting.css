@@ -1,7 +1,6 @@
 
 
 * {
-  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +9,6 @@
 
 body {
 /*min-height: 100vh;*/
-
 background-color: black;
 overflow-x: hidden;
 width: 100%;
@@ -117,7 +115,7 @@ place-items: center;
 
 .mercuryicon {
   position: relative;
-  top: 150%; /* Center vertically */
+  top: 120%; /* Center vertically */
   left: 5%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust for centering */
 }
@@ -130,36 +128,49 @@ place-items: center;
 }
 
 
-
 .mercuryimagetop {
-    margin-top: -80%;
-    margin-right: -130%;
+    margin-top: -100%; /* Start off-screen above */
+    margin-right: -67%;
     width: 180%;
     height: auto;
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    animation: slideInFromRight2 1s ease forwards;
+    animation: slideInFromTop4 1s ease forwards; /* Apply animation */
 }
 
-
-@keyframes slideInFromRight2 {
+@keyframes slideInFromTop4 {
     from {
-        margin-right: -170%; /* Start position */
+        margin-top: -100%; /* Start position */
     }
     to {
-        margin-right: -130%; /* End position */
+        margin-top: -45%; /* End position */
     }
 }
 
-
 .mercuryimagetop img {
-    width: 80%;
+    width: 90%;
     height: auto;
-    transform: rotate(-20deg); /* Rotate the image by -20 degrees */
+    transform: rotate(40deg); /* Rotate the image by 40 degrees */
 }
 
 
+/*@keyframes slideInFromTop {
+  0% {
+    top: -200%;
+    opacity: 0;
+  }
+  100% {
+    top: -100%; 
+    opacity: 1; 
+  }
+}*/
+
+/*.mercuryimagetop img {
+
+  width: 100%;
+}
+*/
 
 
 
@@ -221,6 +232,9 @@ place-items: center;
   box-sizing: border-box;
   text-align: center;
 }
+
+
+
 
   .accordion-container{
     padding: 10px;
@@ -287,6 +301,78 @@ place-items: center;
       border-bottom: 1px solid #999;
     }
 
+
+
+
+
+
+.accordion-container2{
+    padding: 10px;
+    margin-top: 10px;
+    width: 70%;
+  }
+
+
+  /* accordion title text styles */
+    .accordion-container2 p.accordion {
+     color: white;
+      font-size: 1.5em;
+    }
+
+    /* accordion content text styles */
+   .accordion-container2 .accordion-content p {
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1); /* Add an outer glow effect */
+}
+
+.accordion-container2 .accordion-content a {
+     color: white;
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    /* accordion title styles */
+    .accordion-container2 .accordion {
+      cursor: pointer;
+      padding: 15px 15px;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* accordion icon box styles */
+    .accordion-container2 .accordion::after {
+      content: '✕';
+      float: right;
+      transform: rotate(-45deg);
+      font-size: 18px;
+      color: white;
+      transition: .2s ease-out;
+
+    }
+
+    /* accordion icon box styles: opened  */
+    .accordion-container2 .active::after {
+      content: "✕";
+      transform: rotate(0deg);
+      font-size: 18px;
+      color: white;
+    }
+
+    /* accordion content box styles: default */
+    .accordion-container2 .accordion-content {
+
+      padding: 0 10px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+      border-bottom: 1px solid #999;
+    }
+.accordion-container2 .accordion-content ul {
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1); /* Add an outer glow effect */
+}
 
 .moons p {
   margin-top: 18.75em; /* 300px / 16px (assuming the root font size is 16px) */
@@ -374,7 +460,7 @@ place-items: center;
 }
 
 .mercuryimagebottomcontainer {
-  margin-bottom: -20px;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -386,6 +472,8 @@ place-items: center;
 }
 
 .mercuryimagebottom img {
+
+  margin-top: 20%;
   margin-left: -150px;
   width: 130%;
   height: 10%;
@@ -395,18 +483,18 @@ place-items: center;
 
 
 .line {
-    top: -850px;
+    top: -650px;
     left: 10%; /* Initially off the screen to the left */
     position: relative;
     width: 750px; /* Adjust the length of the line */
     height: 0.1px; /* Adjust the thickness of the line */
     background-color: white; /* Adjust the color of the line */
-     animation: slideIn1 1.2s forwards; 
+    animation: slideIn1 1.2s forwards; 
 }
 
 @keyframes slideIn1 {
     from {
-        left: -80%;
+        left: -100%;
     }
     to {
         left: 10%; 
@@ -414,9 +502,8 @@ place-items: center;
 }
 
 
-
 .line2 {
-    top: -130%; /* Initially off the screen to the bottom */
+    top: -100%; /* Initially off the screen to the bottom */
     left: 400px;
     position: relative;
     width: 0.1px; /* Adjust the length of the line */
@@ -425,13 +512,12 @@ place-items: center;
     animation: slideIn2 1.2s forwards; 
 }
 
-
 @keyframes slideIn2 {
     from {
-        top: 80%; 
+        top: 100%; 
     }
     to {
-        top: -130%; 
+        top: -100%; 
     }
 }
 
@@ -439,10 +525,9 @@ place-items: center;
 
 
 
-
 .header {
   position: fixed;
-  top: -100px; /* Start off-screen */
+  top: 30px; /* Start off-screen */
   left: 40px;
   width: 60%;
   padding: 10px 30px;
@@ -454,17 +539,10 @@ place-items: center;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   z-index: 100;
-  animation: slideInFromTop 1s ease forwards; /* Apply animation */
 }
 
-@keyframes slideInFromTop {
-  from {
-    top: -100px; /* Start position */
-  }
-  to {
-    top: 30px; /* End position */
-  }
-}
+
+
 /*
 .header::before {
   content: "";
@@ -531,7 +609,6 @@ place-items: center;
 
 
 .mercurybigtext {
-
   position: absolute;
   top: 250px;
   left: 200px;
@@ -608,7 +685,7 @@ transform: translateY(-4px);
 }
 */
 
-@media (max-width: 992px) {
+@media only screen and (min-width: 768px) {
 
 
 
@@ -639,7 +716,7 @@ transform: translateY(-4px);
 
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
 
 
@@ -702,7 +779,7 @@ transform: translateY(-4px);
     }
 
     .moonscontent {
-      margin-left: -30%;
+      margin-left: -10%;
       max-width: 28.5em; /* 600px / 16px = 37.5em */
     }
 
@@ -726,7 +803,7 @@ transform: translateY(-4px);
   }
 
   .moons p {
-   margin-left: -30%;
+   margin-left: -10%;
 }
 
 .atmosphertitle p {
